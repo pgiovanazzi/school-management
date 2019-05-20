@@ -13,3 +13,6 @@
  5. Run the app with the command `npm start` on the app's root.
  
  6. The app run in `localhost:3000`.
+
+## Author
+Paulo Ordóñez Giovanazzi
