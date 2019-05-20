@@ -1,0 +1,40 @@
+<div class='container'>
+   <h1>{{titulo}}</h1>
+   <div class="row">
+   <br>
+   <a href="/persona/nuevo" class="btn btn-primary mr-2 mb-2">Registrar alumno</a>
+   <a href="/persona/profesor/nuevo" class="btn btn-primary mr-2 mb-2">Registrar Profesor</a>
+   <a href="/curso/info" class="btn btn-primary mr-2 mb-2">Información de curso</a>
+   <a href="/alumno/agregar-nota" class="btn btn-primary mr-2 mb-2">Agregar Notas</a>
+   <a href="/alumno/estado-academico" class="btn btn-primary mr-2 mb-2">Estado academico de un Alumno</a>
+   <table class="table table-striped">
+      <thead style="text-align:center">
+      <tr>
+         <th>Nombres</th>
+         <th>Apellidos</th>
+         <th>Tipo de documento</th>
+         <th>Documento</th>
+         <th>Fecha de nacimiento</th>
+         <th>Legajo</th>
+         <th>Carrera</th>
+         <th>Dirección</th>
+         <th colspan="3">Operación</th>
+      </tr>
+      </thead>
+      {{#each personas}}
+         <tr>
+            <td>{{this.nombre}}</td>
+            <td>{{this.apellido}}</td>
+            <td>{{this.tipodoc}}</td>
+            <td>{{this.documento}}</td>
+            <td>{{dateFormat this.fechanac "YYYY MMM DD"}}</td>
+            <td>{{this.legajo}}</td>
+            <td>{{this.carrera}}</td>
+            <td>{{this.direccion}}</td>
+            <td><a href="/persona/inscripcion-a-curso/{{this.identificador}}">Inscribir a curso</td>
+            <td><a href="/persona/editar/{{this.identificador}}">Editar</td>
+            <td><a href="/persona/eliminar/{{this.identificador}}">Eliminar</td>
+         </tr>
+      {{/each}}
+   </table>
+</div>

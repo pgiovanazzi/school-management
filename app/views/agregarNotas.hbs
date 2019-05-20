@@ -1,0 +1,47 @@
+<div class="container mt-5">
+   <h3>{{titulo}}</h3>
+   <br>
+   <form action="/alumno/agregar-nota/buscar" method="post">
+      <div class="input-group mb-3">
+         <input type="number" name="buscaDNI" class="form-control" placeholder="DNI del Alumno" required>
+         <div class="input-group-append">
+            <input class="btn btn-primary" type="submit" class="input-group-text" id=""></input>
+         </div>
+      </div>
+   </form>
+
+   <h4>Nombre: {{alumno.nombre}}</h4>
+   <h4>Apellido: {{alumno.apellido}}</h4>
+   <h4>Documento: {{alumno.documento}}</h4>
+   <h4>Legajo: {{alumno.legajo}}</h4>
+   <h4>Carrera: {{alumno.carrera}}</h4>
+   <form action="/alumno/agregar-nota/ponerNota" method="post">
+      <input type="hidden" name="idAlumno" value="{{alumno.identificador}}" id='idAlumno'></input>
+      <table class="table table-striped">
+         <thead style="text-align:center">
+            <tr>
+               <th colspan="4">Cursos de la Carrera</th>
+            </tr>
+         </thead>
+         {{#each cursos}}
+         <tr>
+            <td>{{this.nombre}}</td>
+            <td><input type="hidden" name="cursosID" value="{{this.identificador}}"></td>
+            <td><input name='notas' type="number" class="form-control" placeholder="Nota"></td>
+            <td><input name='estados' type="text" class="form-control" placeholder="Estado (libre/regular/aprobado)">
+            </td>
+         </tr>
+         {{/each}}
+      </table>
+      <input id='agregar-notas' class="btn btn-primary" type="hidden" value="Agregar">
+   </form>
+
+   <a class="btn btn-primary mt-5" href="/"> Volver </a>
+</div>
+
+<script>
+   $(document).ready(() => {
+      if($('#idAlumno').val())
+         $('#agregar-notas').attr('type', 'submit')
+   })
+</script>

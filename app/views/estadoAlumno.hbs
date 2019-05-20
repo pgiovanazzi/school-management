@@ -1,0 +1,54 @@
+<div class="container mt-5">
+   <h3>{{titulo}}</h3>
+   <br>
+   <form action="/alumno/estado-academico/buscar" method="post">
+      <div class="input-group mb-3">
+         <input type="number" name="buscaDNI" class="form-control" placeholder="DNI del Alumno" required>
+         <div class="input-group-append">
+            <input class="btn btn-primary" type="submit" class="input-group-text" id=""></input>
+         </div>
+      </div>
+   </form>
+
+   <h5>Nombre y Apellido: {{alumno.nombre}} {{alumno.apellido}}</h5>
+   <h5>Documento: {{alumno.documento}}</h5>
+   <h5>Legajo: {{alumno.legajo}}</h5>
+   <h5>Carrera: {{alumno.carrera}}</h5>
+   <br>
+   <h5>Cursos Actuales:</h5>
+   <table class="table table-striped">
+      <thead style="text-align:center">
+         <tr>
+            <th>Curso</th>
+         </tr>
+      </thead>
+      {{#each cursosAct}}
+         <tr>
+            <td>{{this.nombre}}</td>
+         </tr>
+      {{/each}}
+   </table>
+   <br>
+   <h5>Cursos Anteriores:</h5>
+   <table class="table table-striped">
+      <thead>
+         <tr>
+            <th>Curso</th>
+            <th>Nota</th>
+            <th>Estado</th>
+         </tr>
+      </thead>
+      {{#each cursosAnt}}
+         <tr>
+            <td>{{this.nombre}}</td>
+            <td>{{this.nota}}</td>
+            <td>{{this.estadocurso}}</td>
+         </tr>
+      {{/each}}
+      <tr>
+         <td colspan="3">Promedio de los cursos aprobados: {{promedio}}</td>
+      </tr>
+   </table>
+   
+   <a class="btn btn-primary mb-5" href="/"> Volver </a>
+</div>

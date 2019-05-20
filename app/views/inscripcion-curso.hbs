@@ -1,0 +1,22 @@
+<div class='container'>
+   <h1>{{titulo1}}</h1>
+   <hr>
+   <h3>Alumno: {{alumno.nombre}} {{alumno.apellido}}</h3>
+   <h3>Legajo: {{alumno.legajo}}</h3>
+   <h5 class="mb-5">Cursos de {{alumno.nombre_carrera}}:</h5>
+   <form action="/alumno/curso/inscripto" method="post">
+      <input type="hidden" name="id" value="{{alumno.identificador}}">
+      <div class="row">
+         <table class="table table-striped">
+            {{#each cursos}}
+               <tr>
+                  <td>{{this.nombre}}</td>
+                  <td><input type="checkbox" name="list" value="{{this.identificador}}"></td>
+               </tr>
+            {{/each}}
+         </table>
+         <button type="submit" class="btn btn-primary mr-2">Inscribir</button>
+         <a href="/" class="btn btn-danger">Cancelar</a>
+      </div>
+   </form>
+</div>
