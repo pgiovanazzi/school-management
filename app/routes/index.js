@@ -28,7 +28,7 @@ router.get('/', async (req, res) => {
    const { rows } = await client.query(query)
    res.render(
       'index',
-      { titulo: 'IT Challenge JAVA', personas: rows }
+      { titulo: 'Dashboard', personas: rows }
    )
 })
 
