@@ -15,4 +15,4 @@
  6. The app run in `localhost:3000`.
 
 ## Author
-Paulo Ordóñez Giovanazzi
+Paulo
