@@ -1,7 +1,8 @@
  # NodeJS App.
  
  ### DER
-
+![Alt text](./DER.svg)
+<img src="./DER.svg">
  ### Summary to run app.
  
  1. Create a PostgreSQL DB with the name `dbuni` and start the PostgreSQL service.
