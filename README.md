@@ -2,7 +2,6 @@
  
  ### DER
 
-
  ### Summary to run app.
  
  1. Create a PostgreSQL DB with the name `dbuni` and start the PostgreSQL service.
