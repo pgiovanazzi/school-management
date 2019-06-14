@@ -1,7 +1,9 @@
  # NodeJS App.
  
  ### DER
-<img src="DER.pdf" alt="DER"  width="4200" height="4200">
+\begin{center} <br>
+\includegraphics[width=8in]{DER.pdf} <br>
+\end{center}
 
  ### Summary to run app.
  
