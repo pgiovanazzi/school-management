@@ -1,7 +1,7 @@
  # NodeJS App.
  
  ### DER
-<img src="./DER.pdf">
+<img src="DER.pdf" alt="DER"  width="4200" height="4200">
 
  ### Summary to run app.
  
