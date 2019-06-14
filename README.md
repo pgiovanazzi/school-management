@@ -1,6 +1,7 @@
  # NodeJS App.
  
  ### DER
+ ![Alt](DER.pdf)
 \begin{center} <br>
 \includegraphics[width=8in]{DER.pdf} <br>
 \end{center}
