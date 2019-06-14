@@ -1,7 +1,7 @@
  # NodeJS App.
  
  ### DER
-![alt text](DER.png)
+![](DER.png)
 
  ### Summary to run app.
  
